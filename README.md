@@ -1,5 +1,5 @@
 # Polar UI
-Required: [Rojo](https://github.com/rojo-rbx/rojo) 6.2.0.
+Required: [Rojo](https://github.com/rojo-rbx/rojo) 6.2.0. , [Git](https://git-scm.com/)
 
 ## Getting Started
 Clone this repository
