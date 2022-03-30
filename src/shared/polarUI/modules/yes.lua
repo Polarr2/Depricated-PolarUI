@@ -4,8 +4,8 @@ local yes = {}
 
 yes.Name = "yes"
 
-function yes.test()
-    print("yes.test()")
+function yes.new(theme)
+    print("put code here")
 end
 
 return yes
