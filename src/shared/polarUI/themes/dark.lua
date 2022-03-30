@@ -2,10 +2,11 @@ local theme = {}
 
 theme.Name = "dark"
 theme.Colours = {
-    primary = "0xFF0000",
-    secondary = "0x00FF00",
-    tertiary = "0x0000FF",
-    text = "0xFFFFFF",
+    primary = Color3.fromRGB(46, 46, 46),
+    secondary = Color3.fromRGB(34, 34, 34),
+    tertiary = Color3.fromRGB(25,25,25),
+    text = Color3.fromRGB(255,255,255),
+
 }
 
 return theme

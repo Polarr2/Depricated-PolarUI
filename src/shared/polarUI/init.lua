@@ -37,12 +37,10 @@
 
 
 
+--------------------------------------------------------------------------------
 
---main file and loader for polarUI
 local log = require(script.log)
 
-
---------------------------------------------------------------------------------
 local polar = {}
 
 log.print("loading polarUI")
@@ -74,10 +72,10 @@ for i,v in pairs(script.themes:GetDescendants()) do
     end
 end
 
-function polar.New(name,theme)
+function polar.New(name,theme,properties)
     if modules[name] and themes[theme] then
         local module = modules[name]
-        module.new(theme)
+        module.new(themes[theme],properties)
         return module
     else
         log.error("module " .. name .. " does not exist or theme " .. theme .. " does not exist")
