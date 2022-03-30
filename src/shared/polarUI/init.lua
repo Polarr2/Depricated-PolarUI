@@ -6,6 +6,38 @@
 --╚═╝░░░░░░╚════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝░╚═════╝░╚═╝
 
 
+
+
+
+--Please note that this is a very early version of the PolarUI system.
+--expect bugs and weird behavior.
+--feel free to report any bugs you find.
+--you can also report any suggestions you have for the system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --main file and loader for polarUI
 local log = require(script.log)
 
@@ -29,12 +61,23 @@ for i,v in pairs(script.plugins:GetDescendants()) do
     if v.ClassName == "ModuleScript" then
         local plug = require(v)
         plugins[plug.Name] = plug
-        log.print("loaded module " .. plug.Name)
+        log.print("loaded plugin " .. plug.Name)
     end
 end
 
+local themes = {}
+for i,v in pairs(script.themes:GetDescendants()) do
+    if v.ClassName == "ModuleScript" then
+        local theme = require(v)
+        themes[theme.Name] = theme
+        log.print("loaded theme " .. theme.Name)
+    end
+end
+
+
 polar.Modules = modules
 polar.Plugins = plugins
+polar.Themes = themes
 polar.Log = log
 
 return polar
